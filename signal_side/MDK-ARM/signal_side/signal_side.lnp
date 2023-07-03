@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+"signal_side\startup_stm32f401xe.o"
+"signal_side\main.o"
+"signal_side\stm32f4xx_it.o"
+"signal_side\stm32f4xx_hal_msp.o"
+"signal_side\stm32f4xx_hal_spi.o"
+"signal_side\stm32f4xx_hal_rcc.o"
+"signal_side\stm32f4xx_hal_rcc_ex.o"
+"signal_side\stm32f4xx_hal_flash.o"
+"signal_side\stm32f4xx_hal_flash_ex.o"
+"signal_side\stm32f4xx_hal_flash_ramfunc.o"
+"signal_side\stm32f4xx_hal_gpio.o"
+"signal_side\stm32f4xx_hal_dma_ex.o"
+"signal_side\stm32f4xx_hal_dma.o"
+"signal_side\stm32f4xx_hal_pwr.o"
+"signal_side\stm32f4xx_hal_pwr_ex.o"
+"signal_side\stm32f4xx_hal_cortex.o"
+"signal_side\stm32f4xx_hal.o"
+"signal_side\stm32f4xx_hal_exti.o"
+"signal_side\stm32f4xx_hal_tim.o"
+"signal_side\stm32f4xx_hal_tim_ex.o"
+"signal_side\system_stm32f4xx.o"
+--strict --scatter "signal_side\signal_side.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "signal_side.map" -o signal_side\signal_side.axf
